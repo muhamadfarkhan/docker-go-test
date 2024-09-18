@@ -50,7 +50,7 @@ func main() {
             <html>
             <head><title>Go API</title></head>
             <body>
-            <h1>Welcome to the Go API - Hi...</h1>
+            <h1>Welcome to the Go API - Hi!</h1>
             <p>Go Version: %s</p>
             <p><a href="/users">Click here to view the list of users</a></p>
             </body>

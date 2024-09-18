@@ -18,9 +18,8 @@ jobs:
     # Step 2: Setup Go untuk membuild aplikasi
     - name: Pull repository
       run: |
-          git fetch origin master
-          git reset --hard origin/master
-
+          git pull origin master
+          
     # Step 3: Instal dependensi dan build aplikasi Go
     - name: Build the Go app
       run: |

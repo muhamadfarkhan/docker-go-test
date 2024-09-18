@@ -1,0 +1,30 @@
+name: Sync Repository
+
+on:
+  schedule:
+    # Runs every day at midnight UTC
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+    # Allows manual triggering of the workflow
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Git
+        run: |
+          git config user.name "muhamadfarkhan"
+          git config user.email "muhamad.farkhan24@gmail.com"
+
+      - name: Pull changes from remote branch
+        run: |
+          git fetch origin main
+          git reset --hard origin/main
+
+      - name: Push changes
+        run: |
+          git push origin main

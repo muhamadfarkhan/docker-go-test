@@ -16,7 +16,8 @@ jobs:
       uses: actions/checkout@v2
 
     # Step 2: Setup Go untuk membuild aplikasi
-    
+    - name: Pull repository
+      uses: actions/checkout@v2
 
     # Step 3: Instal dependensi dan build aplikasi Go
     - name: Build the Go app
